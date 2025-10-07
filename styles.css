@@ -420,28 +420,45 @@ footer {
     }
 }
 
-/* LEAGUE LOOKUP STYLES */
+/* LEAGUE LOOKUP STYLES (FIXED & THEME-MATCHED) */
 .league-lookup {
-    background: white;
+    background: #1e293b;
     border-radius: 8px;
     padding: 40px;
     margin-top: 40px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
+    color: #e2e8f0;
+    position: relative;
+}
+
+.league-lookup::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #c89b3c 0%, #b8862e 100%);
+    border-radius: 6px;
+    opacity: 0.9;
 }
 
 .league-lookup h3 {
-    color: #232f3e;
+    color: #facc15;
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 16px;
     text-align: center;
+    letter-spacing: -0.02em;
 }
 
-.league-lookup>p {
+.league-lookup > p {
     font-size: 16px;
-    color: #687078;
+    color: #94a3b8;
     margin-bottom: 32px;
     text-align: center;
+    line-height: 1.6;
 }
 
 .lookup-form-container {
@@ -458,15 +475,15 @@ footer {
 }
 
 .lookup-message.success {
-    background: #dcfce7;
-    color: #166534;
-    border: 1px solid #bbf7d0;
+    background: #064e3b;
+    color: #a7f3d0;
+    border: 1px solid #047857;
 }
 
 .lookup-message.error {
-    background: #fef2f2;
-    color: #dc2626;
-    border: 1px solid #fecaca;
+    background: #7f1d1d;
+    color: #fca5a5;
+    border: 1px solid #dc2626;
 }
 
 .form-group {
@@ -476,7 +493,7 @@ footer {
 .form-group label {
     display: block;
     font-weight: 600;
-    color: #232f3e;
+    color: #f1f5f9;
     margin-bottom: 8px;
 }
 
@@ -484,18 +501,20 @@ footer {
 .form-group select {
     width: 100%;
     padding: 12px 16px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #475569;
     border-radius: 6px;
     font-size: 16px;
-    background: #f8fafc;
+    background: #334155;
+    color: #f1f5f9;
+    transition: all 0.2s ease;
 }
 
 .form-group input:focus,
 .form-group select:focus {
     outline: none;
     border-color: #c89b3c;
-    background: white;
-    box-shadow: 0 0 0 3px rgba(200, 155, 60, 0.1);
+    background: #475569;
+    box-shadow: 0 0 0 3px rgba(200, 155, 60, 0.15);
 }
 
 .lookup-submit-btn {
@@ -518,7 +537,7 @@ footer {
 }
 
 .lookup-submit-btn:disabled {
-    background: #9ca3af;
+    background: #6b7280;
     cursor: not-allowed;
     transform: none;
 }
@@ -527,21 +546,24 @@ footer {
 .summoner-results {
     max-width: 600px;
     margin: 0 auto;
-    background: #f8fafc;
+    background: #334155;
     border-radius: 8px;
     padding: 24px;
+    border: 1px solid #475569;
+    color: #f1f5f9;
 }
 
 .summoner-card {
-    background: white;
+    background: #1e293b;
     border-radius: 6px;
     padding: 20px;
     margin-bottom: 20px;
     text-align: center;
+    border: 1px solid #475569;
 }
 
 .summoner-card h5 {
-    color: #c89b3c;
+    color: #facc15;
     font-size: 24px;
     margin-bottom: 8px;
 }
@@ -553,15 +575,17 @@ footer {
 }
 
 .champion-card {
-    background: white;
+    background: #1e293b;
     border-radius: 6px;
     padding: 16px;
     border-left: 4px solid #c89b3c;
+    border: 1px solid #475569;
 }
 
 .champion-card p {
     margin: 4px 0;
     font-size: 14px;
+    color: #cbd5e1;
 }
 
 @media (max-width: 768px) {
@@ -573,5 +597,3 @@ footer {
         grid-template-columns: 1fr;
     }
 }
-
-/* END LEAGUE LOOKUP STYLES */
